@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h1 class="text-center">Открыть счёт</h1>
+        </div>
+        <div class="card-body">
+            <form method="POST">
+                <button type="submit" name="action" value="act1">Дебетовой</button>
+                <button type="submit" name="action" value="act2">Депозит</button>
+                <button type="submit" name="action" value="act3">Кредитный</button>
+            </form>
+            <div class="text-center">
+                <a href="{{ url_for('cabinet') }}" class="btn btn-secondary">Кабинет</a>
+            </div>
+        </div>
+    </div>
+  </div>
+{% endblock %}

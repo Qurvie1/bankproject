@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h1 class="text-center">Регистрация</h1>
+        </div>
+        <div class="card-body">
+            <form method="POST">  
+              <div class="mb-3">
+                <label for="username" class="form-label">Логин:</label>
+                <input type="text" class="form-control" id="username" name="username" required>
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Пароль:</label>
+                <input type="text" class="form-control" id="password" name="password" required>
+              </div>
+              <div class="mb-3">
+                <label for="name" class="form-label">Имя:</label>
+                <input type="name" class="form-control" id="name" name="name" required>
+              </div>
+              <div class="mb-3">
+                <label for="surname" class="form-label">Фамилия:</label>
+                <input type="surname" class="form-control" id="name" name="surname" required>
+              </div>
+              <div class="mb-3">
+                <label for="address" class="form-label">Адрес:</label>
+                <input type="address" class="form-control" id="address" name="address">
+              </div>
+              <div class="mb-3">
+                <label for="series" class="form-label">Серия паспорта:</label>
+                <input type="series" class="form-control" id="series" name="series">
+              </div>
+              <div class="mb-3">
+                <label for="number" class="form-label">Номер паспорта:</label>
+                <input type="number" class="form-control" id="number" name="number">
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+              </div>
+            </form>
+        </div>
+    </div>
+  </div>
+{% endblock %}

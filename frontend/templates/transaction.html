@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h1 class="text-center">Провести транзацию</h1>
+        </div>
+        <div class="card-body">
+            <form method="POST">
+              <div class="mb-3">
+                <label for="username1" class="form-label">От кого:</label>
+                <input type="text" class="form-control" id="username1" name="username1" required>
+              </div>
+              <div class="mb-3">
+                <label for="username2" class="form-label">Кому:</label>
+                <input type="text" class="form-control" id="username2" name="username2" required>
+              </div>
+              <div class="mb-3">
+                <label for="amount" class="form-label">Сумма:</label>
+                <input type="text" class="form-control" id="amount" name="amount" required>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">Отправить</button>
+              </div>
+              <div class="text-center">
+                <a href="{{ url_for('cabinet') }}" class="btn btn-secondary">Кабинет</a>
+              </div>
+            </form>
+        </div>
+    </div>
+  </div>
+{% endblock %}

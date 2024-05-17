@@ -1,0 +1,11 @@
+FROM gcc:latest
+
+WORKDIR /app
+
+EXPOSE 9090
+
+COPY . .
+
+RUN g++ -o server server.cpp
+
+CMD ["./server"]

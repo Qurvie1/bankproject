@@ -1,0 +1,5 @@
+/Users/pebunov/Downloads/tp_project1/tpprojecshdu/builder/CMakeFiles/edit_cache.dir
+/Users/pebunov/Downloads/tp_project1/tpprojecshdu/builder/CMakeFiles/rebuild_cache.dir
+/Users/pebunov/Downloads/tp_project1/tpprojecshdu/builder/src/CMakeFiles/tests.dir
+/Users/pebunov/Downloads/tp_project1/tpprojecshdu/builder/src/CMakeFiles/edit_cache.dir
+/Users/pebunov/Downloads/tp_project1/tpprojecshdu/builder/src/CMakeFiles/rebuild_cache.dir

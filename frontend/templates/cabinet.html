@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h1 class="text-center">Привет, {{ user.name }}</h1>
+          </div>
+          <div class="card-body">
+            <p>Ваши данные:</p>
+            <p>Имя: {{ user.name }}</p>
+            <p>Фамилия: {{ user.surname }}</p>
+            <p>Адрес: {{ user.address }}</p>
+            <p>Серия паспорта: {{ user.series }}</p>
+            <p>Номер паспорта: {{ user.number }}</p>
+            <p>Ваши счета:</p>
+            {% if user.acc1 == -1 %}
+              <p>Дебетовой: не открыт</p>
+            {% else %}
+              <p>Дебетовой: открыт, на нём {{ user.acc1 }} рублей</p>
+            {% endif %}
+            {% if user.acc2 == -1 %}
+              <p>Депозит: не открыт</p>
+            {% else %}
+              <p>Депозит: открыт, на нём {{ user.acc2 }} рублей</p>
+            {% endif %}
+            {% if user.acc3 == -1 %}
+              <p>Кредитный: не открыт</p>
+            {% else %}
+              <p>Кредитный: открыт, на нём {{ user.acc3 }} рублей</p>
+            {% endif %}
+            <h2>Выберите действие:</h2>
+            <form method="POST">
+              <button type="submit" name="action" value="action1">Провести транзакцию</button>
+              <button type="submit" name="action" value="action2">Внести деньги</button>
+              <button type="submit" name="action" value="action3">Открыть счёт</button>
+            </form>
+            <div class="text-center">
+              <a href="{{ url_for('logout') }}" class="btn btn-secondary">Выход</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
